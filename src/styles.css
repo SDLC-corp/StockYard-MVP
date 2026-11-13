@@ -3,6 +3,7 @@ html, body, #root { height: 100%; margin: 0; }
 .brand { display: flex; align-items: center; gap: 10px; height: 64px; padding: 0 20px; color: #fff; font-weight: 700; font-size: 18px; letter-spacing: .2px; }
 .brand-mark { width: 30px; height: 30px; border-radius: 8px; background: #1f6feb; display: grid; place-items: center; }
 .app-content { padding: 24px; max-width: 1400px; width: 100%; margin: 0 auto; box-sizing: border-box; }
-.login-wrap { min-height: 100%; display: grid; place-items: center; padding: 16px; background: linear-gradient(135deg, #0d2847 0%, #1f4e79 55%, #1f6feb 100%); }
+.login-wrap { min-height: 100vh; box-sizing: border-box; display: grid; place-items: center; padding: 16px; background: linear-gradient(135deg, #0d2847 0%, #1f4e79 55%, #1f6feb 100%); }
 .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; }
 @media (max-width: 640px) { .app-content { padding: 16px; } }
+.nowrap-table th, .nowrap-table td { white-space: nowrap; }

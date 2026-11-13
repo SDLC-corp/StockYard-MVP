@@ -70,12 +70,12 @@ export default function Dashboard() {
               <ResponsiveContainer>
                 <BarChart data={k.days} margin={{ left: 0, right: 8 }}>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} strokeOpacity={0.3} />
-                  <XAxis dataKey="day" tick={{ fontSize: 11 }} interval={1} />
+                  <XAxis dataKey="day" tick={{ fontSize: 11 }} interval="preserveStartEnd" minTickGap={18} />
                   <YAxis tick={{ fontSize: 11 }} width={56} />
                   <Tooltip formatter={(v: number) => fmtMoney(v)} />
                   <Legend />
-                  <Bar dataKey="Inbound" fill="#1f6feb" radius={[4, 4, 0, 0]} />
-                  <Bar dataKey="Outbound" fill="#f59e0b" radius={[4, 4, 0, 0]} />
+                  <Bar isAnimationActive={false} dataKey="Inbound" fill="#1f6feb" radius={[4, 4, 0, 0]} />
+                  <Bar isAnimationActive={false} dataKey="Outbound" fill="#f59e0b" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>

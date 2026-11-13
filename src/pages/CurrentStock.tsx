@@ -63,7 +63,7 @@ export default function CurrentStock() {
         <Col xs={12} md={6}><Card><Statistic title="Lots near expiry / expired" value={tiles.nearExpiry} valueStyle={{ color: tiles.nearExpiry ? '#d48806' : undefined }} /></Card></Col>
       </Row>
       <Row gutter={[16, 16]}>
-        <Col xs={24} xl={15}>
+        <Col xs={24} xxl={15}>
           <Card
             title="Stock by item & location"
             extra={
@@ -102,7 +102,7 @@ export default function CurrentStock() {
             />
           </Card>
         </Col>
-        <Col xs={24} xl={9}>
+        <Col xs={24} xxl={9}>
           <Card title="Ledger buckets for selected item">
             <Select showSearch optionFilterProp="label" style={{ width: '100%', marginBottom: 16 }} value={selected} onChange={setSelected}
               options={db.items.map((i) => ({ value: i.id, label: `${i.code} - ${i.name}` }))} />
@@ -126,10 +126,10 @@ export default function CurrentStock() {
                         <YAxis type="category" dataKey="loc" width={80} tick={{ fontSize: 11 }} />
                         <Tooltip />
                         <Legend />
-                        <Bar dataKey="On hand (available)" stackId="a" fill="#1f6feb" />
-                        <Bar dataKey="Reserved" stackId="a" fill="#7c3aed" />
-                        <Bar dataKey="Blocked" stackId="a" fill="#d97706" />
-                        <Bar dataKey="In transit" stackId="a" fill="#0d9488" />
+                        <Bar isAnimationActive={false} dataKey="On hand (available)" stackId="a" fill="#1f6feb" />
+                        <Bar isAnimationActive={false} dataKey="Reserved" stackId="a" fill="#7c3aed" />
+                        <Bar isAnimationActive={false} dataKey="Blocked" stackId="a" fill="#d97706" />
+                        <Bar isAnimationActive={false} dataKey="In transit" stackId="a" fill="#0d9488" />
                       </BarChart>
                     </ResponsiveContainer>
                   ) : <Empty description="No stock" />}

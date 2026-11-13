@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sdlc-corp.github.io/StockYard-MVP/sitemap.xml

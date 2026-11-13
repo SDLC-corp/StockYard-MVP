@@ -1,0 +1,21 @@
+# StockYard
+
+> StockYard is an inventory management system that covers procurement through to stock. It handles purchase orders, approvals, gate entry and goods receipts, a four-bucket stock ledger, lot and serial traceability, warehouse transfers, replenishment planning, accounting periods and an audit trail. This site is a free, browser-based live demo (MVP) of the StockYard product by SDLC Corp.
+
+## Key facts
+- Category: inventory management system / stock management software / warehouse inventory control
+- Workflow: purchase order -> approval -> sent to supplier -> gate entry -> inspection (accepted vs rejected) -> goods receipt -> stock posting
+- Stock ledger buckets: ON_HAND, RESERVED, BLOCKED, IN_TRANSIT. Available = on hand - reserved - blocked (derived, never stored)
+- 16 stock transaction types, posted through a single atomic posting service with idempotency keys
+- Ledger is immutable: corrections are reversals, each transaction can be reversed once
+- Traceability: lots with expiry (expired lots blocked at posting), serial numbers with a state machine and movement history
+- Planning: safety stock, reorder point, demand history, days of cover, suggested order quantity
+- Controls: role-based access (Storekeeper, Procurement, Approver, Administrator), single approval engine, closed accounting periods, audit trail with old/new values, ledger reconciliation
+- Costing: weighted average cost recalculated on goods receipt
+- Tech: React 18, TypeScript, Vite, Ant Design 5, Recharts. Production StockYard uses Node.js/Express and PostgreSQL with Prisma.
+
+## Links
+- Live demo: https://sdlc-corp.github.io/StockYard-MVP/
+- Source code: https://github.com/SDLC-corp/StockYard-MVP
+- Product page: https://sdlccorp.com/products/stockyard/
+- Contact: sales@sdlccorp.com

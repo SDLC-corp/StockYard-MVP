@@ -2,13 +2,63 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="StockYard - procure-to-stock inventory management MVP" />
-    <title>StockYard</title>
+    <title>StockYard: Inventory Management System Demo (Procure-to-Stock, Lot & Serial Tracking)</title>
+    <meta name="description" content="StockYard is an inventory management system covering purchase orders, approvals, goods receipts, a four-bucket stock ledger, lot and serial traceability, warehouse transfers, replenishment and an audit trail. Try the free live demo." />
+    <meta name="keywords" content="inventory management system, stock management software, warehouse management, procure to stock, purchase order management, goods receipt note, GRN, stock ledger, lot tracking, serial number tracking, batch and expiry tracking, reorder point, replenishment planning, approval workflow, audit trail, weighted average cost, multi-warehouse inventory, React inventory app, open source inventory demo" />
+    <meta name="author" content="SDLC Corp" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#1f4e79" />
+    <link rel="canonical" href="https://sdlc-corp.github.io/StockYard-MVP/" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="StockYard" />
+    <meta property="og:title" content="StockYard: Inventory Management System, Live Demo" />
+    <meta property="og:description" content="Purchase orders to stock ledger: approvals, goods receipts, lot and serial traceability, transfers, replenishment and audit trail, in one app." />
+    <meta property="og:url" content="https://sdlc-corp.github.io/StockYard-MVP/" />
+    <meta property="og:image" content="https://sdlc-corp.github.io/StockYard-MVP/og-image.png" />
+    <meta property="og:image:alt" content="StockYard inventory dashboard with stock KPIs, movement chart and pending approvals" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="StockYard: Inventory Management System, Live Demo" />
+    <meta name="twitter:description" content="Procure-to-stock inventory management with lot and serial traceability, approvals and replenishment." />
+    <meta name="twitter:image" content="https://sdlc-corp.github.io/StockYard-MVP/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "StockYard",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Inventory Management System",
+        "operatingSystem": "Web browser",
+        "url": "https://sdlc-corp.github.io/StockYard-MVP/",
+        "image": "https://sdlc-corp.github.io/StockYard-MVP/og-image.png",
+        "description": "Inventory management system that covers procurement through to stock: purchase orders, approvals, gate entry, goods receipts, a four-bucket stock ledger (on hand, reserved, blocked, in transit), lot and serial traceability, warehouse transfers, replenishment planning, accounting periods and an audit trail.",
+        "featureList": [
+          "Purchase order management with approval workflow",
+          "Gate entry, inspection and goods receipt (GRN)",
+          "Four-bucket stock ledger with derived available quantity",
+          "Lot, batch and expiry tracking",
+          "Serial number tracking with movement history",
+          "Direct and in-transit warehouse transfers",
+          "Reorder point and replenishment planning",
+          "Weighted average costing",
+          "Role-based access control",
+          "Audit trail and ledger reconciliation"
+        ],
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free live demo" },
+        "publisher": { "@type": "Organization", "name": "SDLC Corp", "url": "https://sdlccorp.com/products/stockyard/" },
+        "sameAs": ["https://github.com/SDLC-corp/StockYard-MVP", "https://sdlccorp.com/products/stockyard/"]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <h1>StockYard: Inventory Management System</h1>
+      <p>StockYard covers procurement through to stock: purchase orders, approvals, goods receipts, a four-bucket stock ledger, lot and serial traceability, transfers, replenishment and an audit trail. Enable JavaScript to use the live demo.</p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

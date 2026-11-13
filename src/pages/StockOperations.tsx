@@ -1,4 +1,4 @@
-import { Alert, Button, Card, Col, Descriptions, Form, Input, InputNumber, Row, Segmented, Select, Table, Typography } from 'antd';
+import { Alert, Button, Card, Col, Descriptions, Form, Input, InputNumber, Radio, Row, Select, Table, Typography } from 'antd';
 import { useEffect, useMemo, useState } from 'react';
 import { api, svc } from '../domain/api';
 import type { SerialStatus } from '../domain/types';
@@ -63,7 +63,7 @@ export default function StockOperations() {
       <Row gutter={[16, 16]}>
         <Col xs={24} xl={11}>
           <Card>
-            <Segmented block options={OPS.map((o) => ({ value: o.value, label: o.label }))} value={op} onChange={(v) => setOp(v as Op)} style={{ marginBottom: 12, overflowX: 'auto' }} />
+            <Radio.Group optionType="button" buttonStyle="solid" options={OPS.map((o) => ({ value: o.value, label: o.label }))} value={op} onChange={(e) => setOp(e.target.value as Op)} style={{ marginBottom: 12, display: 'flex', flexWrap: 'wrap', rowGap: 8 }} />
             <Typography.Paragraph type="secondary">{meta.help}</Typography.Paragraph>
             <Form form={form} layout="vertical" onFinish={submit}>
               <Form.Item name="itemId" label="Item" rules={[{ required: true, message: 'Select an item' }]}>
@@ -127,7 +127,7 @@ export default function StockOperations() {
         </Col>
         <Col xs={24} xl={13}>
           <Card title="Recent operations" style={{ marginBottom: 16 }}>
-            <Table size="small" rowKey="id" dataSource={recent} pagination={false} scroll={{ x: 560 }}
+            <Table size="small" rowKey="id" className="nowrap-table" dataSource={recent} pagination={false} scroll={{ x: 'max-content' }}
               columns={[
                 { title: 'Txn', dataIndex: 'no', render: (v) => <span className="mono">{v}</span> },
                 { title: 'When', render: (_, t) => fmtDateTime(t.at) },

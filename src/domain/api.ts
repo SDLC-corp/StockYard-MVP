@@ -19,6 +19,14 @@ try {
 } catch {
   /* storage unavailable */
 }
+// Demo deep link: ?as=storekeeper|procurement|approver|admin signs in as that role.
+try {
+  const as = new URLSearchParams(window.location.search).get('as');
+  const demoUser = as ? store.get().users.find((u) => u.username === as.toLowerCase()) : undefined;
+  if (demoUser) sessionUserId = demoUser.id;
+} catch {
+  /* not in a browser */
+}
 const sessionListeners = new Set<() => void>();
 
 export const session = {

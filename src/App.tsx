@@ -85,11 +85,13 @@ function Shell() {
   );
 
   return (
-    <Layout style={{ minHeight: '100%' }}>
+    <Layout style={{ minHeight: '100vh' }}>
       {screens.lg ? (
-        <Layout.Sider width={236} style={{ position: 'sticky', top: 0, height: '100vh', overflow: 'auto' }}>
-          {brand}
-          {menu}
+        <Layout.Sider width={236}>
+          <div style={{ position: 'sticky', top: 0, maxHeight: '100vh', overflowY: 'auto' }}>
+            {brand}
+            {menu}
+          </div>
         </Layout.Sider>
       ) : (
         <Drawer
