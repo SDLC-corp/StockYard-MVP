@@ -11,6 +11,7 @@
 <p align="center">
   <a href="https://sdlc-corp.github.io/StockYard-MVP/"><img alt="Live demo" src="https://img.shields.io/badge/Live%20demo-open-1f6feb?style=for-the-badge" /></a>
   <a href="https://github.com/SDLC-corp/StockYard-MVP/actions/workflows/deploy.yml"><img alt="Build and deploy" src="https://img.shields.io/github/actions/workflow/status/SDLC-corp/StockYard-MVP/deploy.yml?branch=main&style=for-the-badge&label=build" /></a>
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" /></a>
   <img alt="TypeScript strict" src="https://img.shields.io/badge/TypeScript-strict-3178c6?style=for-the-badge&logo=typescript&logoColor=white" />
   <img alt="React 18" src="https://img.shields.io/badge/React-18-61dafb?style=for-the-badge&logo=react&logoColor=black" />
   <img alt="Ant Design 5" src="https://img.shields.io/badge/Ant%20Design-5-0170fe?style=for-the-badge&logo=antdesign&logoColor=white" />
